@@ -1,0 +1,35 @@
+require "rails_helper"
+
+RSpec.describe <%= class_name %>, type: :serializer do
+  let(:klass) do
+    Class.new do
+      include ActiveModel::Serialization
+      include ActiveModel::Model
+
+      def attributes
+        {
+          created_at: created_at
+        }
+      end
+
+      def attribute_names
+        attributes.keys.map(&:to_s)
+      end
+
+      def created_at
+        Time.current
+      end
+    end
+  end
+
+  let(:factory) { klass.new }
+
+  describe "attributes" do
+    let(:serialized) { serialize(factory, serializer_class: described_class) }
+    let(:factory_json) { attributes_as_json(factory) }
+
+    it(:match) do
+      expect(serialized.serializable_hash).to include_json(**factory_json)
+    end
+  end
+end
