@@ -12,7 +12,7 @@ RSpec.describe <%= class_name %>, type: :model do
 
   describe "Included mix-in" do
     subject do
-      Module<%= class_name.split("::").last %>.included_modules 
+      Module<%= class_name.split("::").last %>.included_modules
     end
 
     it { is_expected.to include described_class }
