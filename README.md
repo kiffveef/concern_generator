@@ -1,8 +1,44 @@
 # Barite
-Short description and motivation.
+
+Ruby on Rails (with RSpec) custom generators.
+
+[![Build Status](https://travis-ci.org/weathare/barite.svg?branch=master)](https://travis-ci.org/weathare/barite)
 
 ## Usage
-How to use my plugin.
+
+### app/serializers
+
+```bash
+$ rails g response NAME
+```
+
+### app/*/concerns
+
+```bash
+// controllers module
+$ rails g concern:controller NAME
+
+// model module
+$ rails g concern:model NAME
+```
+
+### spec/*/*_spec.rb
+
+inject test code with included modules
+
+```bash
+// controller
+$ rails g concern:rspec MODULE_NAME --controller CONTROLLER_NAME
+
+// model
+$ rails g concern:rspec MODULE_NAME --model MODEL_NAME
+```
+
+### rambulance setup
+
+```bash
+$ rails g rambulance:setup
+```
 
 ## Installation
 Add this line to your application's Gemfile:
