@@ -1,5 +1,6 @@
 sudo: false
 language: ruby
+dist: precise
 rvm:
 - 2.4.1
 cache: bundler
