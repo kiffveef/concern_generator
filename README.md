@@ -2,6 +2,8 @@
 
 Ruby on Rails (with RSpec) custom generators.
 
+[![Build Status](https://travis-ci.org/weathare/barite.svg?branch=master)](https://travis-ci.org/weathare/barite)
+
 ## Usage
 
 ### app/serializers
