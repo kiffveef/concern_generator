@@ -2,7 +2,7 @@ require "rails_helper"
 require "rambulance"
 
 RSpec.describe Rambulance::SetupGenerator, type: :generator do
-  destination File.expand_path("../../../tmp", __FILE__)
+  destination File.expand_path("../../../../tmp", __FILE__)
 
   before do
     prepare_destination
