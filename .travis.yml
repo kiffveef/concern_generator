@@ -1,0 +1,16 @@
+sudo: false
+language: ruby
+rvm:
+- 2.4.1
+cache: bundler
+bundler_args: "--without production"
+before_install: gem install bundler
+script:
+- bundle exec rspec
+branches:
+  only:
+  - master
+notifications:
+  email: false
+  slack:
+    secure: APfBau3lAyYtczie+TDLJ/Zfe/RXz2nYjkzcIqBH+3YeXm9QOtHFA6WY71B87Z0eOWUQ8L6nX2J+KQ/DN/FNe+FEZLPVMdXKDoCycuJlWvH3ttTUjmbMVAPe1ruzlLNsIvw8qcB60CFV8IL55cLWH2rLygU+jr7gMwpY8WdtIwtBEmrk2RC2VatHp7Qb891QILiYYgrZAE1cY73tEq1hFBblHdV/JNfm6KhXoP/DpUsWsGLrY8AKZAtzNrcSQkJz+v5RLCCuwJElOADg80ubKBsq9m9k2HbwKflsip+c2EQDC9228W9cYX4TW9ulcAcU15DdjeO9XR5Coi9uEpoYRAYL9cQE9IuvVHTTsqV0lQMyO3fDXw/n9auEk92R2NUfwibpJs5mTGu6V/ctHZxufFhnLzFyLWj4Rm+iYDhatkqO62G8gvBpBIWeM5xCIv53CiUMAC0/hKO8j8E3hvywup3Pl/Xhc1IzIYe/HndHIwHYuUS8H7Hs7yuOqijaK5EpuL59bOCr8njtYQcf7oNqHck+htVSX4w5Oj5Swvd6Evu6ptYyRn1YN2RK5AqkavAw9sF/4fQg5fBhgGy6Z2U6sEif7gnuu3ThxMitwUriKWXgbgHVGrJb7+XN8bV3wplfGabH3oefNuEncop31axDBD/HGjiZmQjIiKKUkdb62wQ=
