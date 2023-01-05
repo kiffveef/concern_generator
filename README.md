@@ -1,4 +1,4 @@
-# Barite
+# Rails Concern Generaters
 
 Ruby on Rails (with RSpec) custom generators.
 
